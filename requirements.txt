@@ -1,0 +1,9 @@
+ultralytics==8.4.50
+opencv-python
+PyQt5
+numpy
+pandas
+python-dotenv
+PyYAML
+requests
+Pillow

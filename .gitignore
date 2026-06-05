@@ -1,0 +1,106 @@
+﻿# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.cache/
+.ipynb_checkpoints/
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*secret*
+*token*
+*credentials*
+credentials*.json
+service-account*.json
+
+# =========================
+# IDE / OS
+# =========================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# Dataset
+# =========================
+dataset/
+datasets/
+data/
+images/
+labels/
+train/
+valid/
+val/
+test/
+
+# =========================
+# YOLO / Training outputs
+# =========================
+runs/
+weights/
+checkpoints/
+results/
+wandb/
+mlruns/
+
+# =========================
+# Model files
+# =========================
+*.pt
+*.pth
+*.onnx
+*.h5
+*.tflite
+*.pb
+*.pkl
+*.joblib
+
+# =========================
+# Media / Test files
+# =========================
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.gif
+
+# =========================
+# Large compressed files
+# =========================
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# =========================
+# Notebook checkpoints / exports
+# =========================
+*.html

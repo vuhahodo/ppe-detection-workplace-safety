@@ -1,0 +1,33 @@
+Bạn mở PowerShell tại thư mục:
+
+cd "D:\VKU\3\ki2\ThiGiacMayTinh\Final_Exam"
+Cài thư viện:
+
+pip install -r requirements.txt
+Kiểm tra model load được:
+
+python -c "from ultralytics import YOLO; m=YOLO('models/ppe_merged_best.pt'); print(m.names)"
+Kết quả đúng nên là:
+
+{0: 'person', 1: 'helmet', 2: 'no_helmet', 3: 'no_vest', 4: 'no_glove'}
+Chạy app:
+
+python app/main.py
+Trong app, kiểm tra theo thứ tự này:
+
+Vào tab Realtime Camera, bấm Start Camera.
+Nếu webcam mở được, app sẽ hiển thị frame realtime và bbox khi detect.
+Vào tab ROI Config, bấm Use Current Frame, click ít nhất 3 điểm để vẽ vùng giám sát, rồi bấm Save ROI.
+Quay lại Realtime Camera để test phát hiện trong ROI.
+Vào Upload Image/Video, chọn ảnh hoặc video test để kiểm tra detection.
+Vào Violation History để xem event đã lưu.
+Vào Daily Statistics để xem thống kê.
+Nếu muốn test Telegram, tạo file .env trong thư mục gốc:
+
+TELEGRAM_BOT_TOKEN=token_moi_cua_ban
+TELEGRAM_CHAT_ID=-100xxxxxxxxxx
+TELEGRAM_MESSAGE_THREAD_ID=
+Sau đó chạy lại:
+
+python app/main.py
+Lưu ý: nếu app báo thiếu TELEGRAM_BOT_TOKEN hoặc TELEGRAM_CHAT_ID, app vẫn lưu SQLite và ảnh, chỉ không gửi Telegram.

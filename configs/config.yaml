@@ -1,0 +1,61 @@
+app:
+  name: PPE No-Helmet Realtime Detection
+  mode: desktop
+  save_dir: outputs/events
+  database_path: database/events.db
+model:
+  path: models/ppe_merged_best.pt
+  input_size: 640
+  device: auto
+classes:
+  required:
+    person: person
+    helmet: helmet
+    no_helmet: no_helmet
+  optional:
+    no_vest: no_vest
+    no_glove: no_glove
+camera:
+  default_id: webcam
+  default_name: Webcam
+  default_source: 0
+  roi: []
+thresholds:
+  person_conf: 0.35
+  helmet_conf: 0.35
+  no_helmet_conf: 0.4
+  no_vest_conf: 0.4
+  no_glove_conf: 0.4
+  iou_threshold: 0.45
+violation:
+  primary_type: no_helmet
+  match_no_helmet_to_person: true
+  head_region_ratio: 0.35
+  confirmation_frames: 5
+  cooldown_seconds: 30
+  count_multiple_people_as_one_event: true
+roi:
+  enabled: true
+  default_mode: full_frame_if_not_set
+  save_to_sqlite: true
+  export_to_config: true
+telegram:
+  enabled: true
+  bot_token_env: TELEGRAM_BOT_TOKEN
+  chat_id_env: TELEGRAM_CHAT_ID
+  message_thread_id_env: TELEGRAM_MESSAGE_THREAD_ID
+  send_raw_image: true
+  send_annotated_image: true
+  send_mode: media_group
+  retry_count: 1
+database:
+  type: sqlite
+  path: database/events.db
+display:
+  show_person_box: true
+  show_helmet_box: true
+  show_no_helmet_box: true
+  show_optional_ppe: true
+  show_roi: true
+  show_fps: true
+  flip_webcam_horizontal: true
