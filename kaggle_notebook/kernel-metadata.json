@@ -1,0 +1,22 @@
+{
+  "id": "dophucvuha/final-computervision",
+  "id_no": 119431683,
+  "title": "Final_ComputerVision",
+  "code_file": "final-computervision.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "dophucvuha/yolo-ppe-merged-dataset",
+    "snehilsanyal/construction-site-safety-image-dataset-roboflow"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}

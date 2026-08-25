@@ -1,0 +1,11 @@
+path: /kaggle/working/ppe_merge_train_work/merged_ppe_dataset
+train: train/images
+val: val/images
+test: test/images
+nc: 5
+names:
+- person
+- helmet
+- no_helmet
+- no_vest
+- no_glove
