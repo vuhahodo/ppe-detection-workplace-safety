@@ -39,8 +39,4 @@ This project was developed as an academic Computer Vision project to apply deep 
 
 ## Author
 
-Van Trong Huy  
-Artificial Intelligence Engineering Student  
-Vietnam-Korea University of Information and Communication Technology (VKU)
-
-GitHub: https://github.com/VTHuy2203
+GitHub: https://github.com/vuhahodo
